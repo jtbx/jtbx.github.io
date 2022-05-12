@@ -41,10 +41,11 @@ pkgmake nsxiv
 pkgmake nerd-fonts-jetbrains-mono
 
 cd ..
-rm -rfv x86_64/*
+rm -rfv x86_64/
 mv sources/*/*.pkg.tar.zst x86_64/
 rm -rf sources/
 
+mkdir x86_64
 cd x86_64
 repo-add jtbx-aur.db.tar.xz *.pkg.tar.zst
 cd ../..
